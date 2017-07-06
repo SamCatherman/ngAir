@@ -7,7 +7,7 @@ angular.module('ngAir', [])
     });
 
     $scope.searchCountry = "usa";
-    $scope.searchCity = "springfield";
+    $scope.searchCity = "boston";
     $scope.searchState = "massachusetts";
 
     let getAirQuality = () => {
@@ -27,4 +27,6 @@ angular.module('ngAir', [])
 
 //hide API key
 
-//figure out correct expression for ng-if in air-data.html partial page
+//style display sheet, add additional info.
+
+//data graphic: how to visualize air quality index, maybe over a map?
