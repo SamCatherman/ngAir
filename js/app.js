@@ -16,13 +16,14 @@ angular.module('ngAir', [])
           console.log(response);
           console.log($scope.searchCountry);
           console.log(response.data.data.current.pollution.aqius);
+          $scope.aqi = response.data.data.current.pollution.aqius;
+          $scope.city = response.data.data.city;
+
+
         })
     }
   });
-//todo: do I need to reference each model in the scope.watch function?
-//in OMBD example, there is only one search model, for the Movie title.
-// How would I handle multiple fields, country/city/state?
-
+//todo:
 
 //hide API key
 
