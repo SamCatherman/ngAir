@@ -2,12 +2,12 @@
 
 angular.module('ngAir', [])
   .controller('AirController', ($scope, $http) => {
-    $scope.$watch('search', () => {
+    $scope.$watchGroup(['searchCountry', 'searchCity', 'searchState'], () => {
       getAirQuality();
     });
 
     $scope.searchCountry = "usa";
-    $scope.searchCity = "boston";
+    $scope.searchCity = "springfield";
     $scope.searchState = "massachusetts";
 
     let getAirQuality = () => {
@@ -18,7 +18,6 @@ angular.module('ngAir', [])
           console.log(response.data.data.current.pollution.aqius);
           $scope.aqi = response.data.data.current.pollution.aqius;
           $scope.city = response.data.data.city;
-
 
         })
     }
