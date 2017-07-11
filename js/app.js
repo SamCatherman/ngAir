@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngAir', [])
+angular.module('ngAir', ['ngMap'])
   .controller('AirController', ($scope, $http) => {
     $scope.$watchGroup(['searchCountry', 'searchCity', 'searchState'], () => {
       getAirQuality();
@@ -16,6 +16,7 @@ angular.module('ngAir', [])
           console.log(response);
           console.log($scope.searchCountry);
           console.log(response.data.data.current.pollution.aqius);
+          console.log(response.data.data.location.coordinates);
           $scope.aqi = response.data.data.current.pollution.aqius;
           $scope.city = response.data.data.city;
 
@@ -25,6 +26,10 @@ angular.module('ngAir', [])
 //todo:
 
 //hide API key
+
+//add error message for bad request
+
+//additional info about air quality
 
 //style display sheet, add additional info.
 
