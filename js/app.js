@@ -19,8 +19,6 @@ angular.module('ngAir', ['ngMap'])
           $scope.cityLocation = response.data.data.location.coordinates.reverse();
           console.log($scope.aqi);
           console.log($scope.cityLocation[0]);
-          $scope.yourMom = "Yo Mama!"
-
         })
     }
   });
