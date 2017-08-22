@@ -6,19 +6,20 @@ angular.module('ngAir', ['ngMap'])
       getAirQuality();
     });
 
-    $scope.searchCountry = "usa";
-    $scope.searchCity = "springfield";
-    $scope.searchState = "massachusetts";
+    $scope.searchCountry = '';
+    $scope.searchCity = '';
+    $scope.searchState = '';
 
     let getAirQuality = () => {
-      $http.get("http://api.airvisual.com/v2/city?country=" + $scope.searchCountry + "&state=" + $scope.searchState + "&city=" + $scope.searchCity + "&key=can'tseeme")
+      $http.get("http://api.airvisual.com/v2/city?country=" + $scope.searchCountry + "&state=" + $scope.searchState + "&city=" + $scope.searchCity + "&key=cantseeme")
         .then((response) => {
           console.log(response);
-          console.log($scope.searchCountry);
-          console.log(response.data.data.current.pollution.aqius);
-          console.log(response.data.data.location.coordinates);
           $scope.aqi = response.data.data.current.pollution.aqius;
           $scope.city = response.data.data.city;
+          $scope.cityLocation = response.data.data.location.coordinates.reverse();
+          console.log($scope.aqi);
+          console.log($scope.cityLocation[0]);
+          $scope.yourMom = "Yo Mama!"
 
         })
     }

@@ -4,3 +4,9 @@ body {
   text-align: center;
   margin: auto;
 }
+
+ng-map {
+  width: 50%;
+  height: 150%;
+  margin: auto;
+}
