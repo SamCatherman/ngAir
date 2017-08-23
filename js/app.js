@@ -11,11 +11,14 @@ angular.module('ngAir', ['ngMap'])
     $scope.searchState = '';
 
     let getAirQuality = () => {
-      $http.get("http://api.airvisual.com/v2/city?country=" + $scope.searchCountry + "&state=" + $scope.searchState + "&city=" + $scope.searchCity + "&key=cantseeme")
+      $http.get("http://api.airvisual.com/v2/city?country=" + $scope.searchCountry + "&state=" + $scope.searchState + "&city=" + $scope.searchCity + "&key=CANTSEEME")
         .then((response) => {
           console.log(response);
           $scope.aqi = response.data.data.current.pollution.aqius;
           $scope.city = response.data.data.city;
+          $scope.temp = response.data.data.current.weather.tp;
+          $scope.wind = response.data.data.current.weather.ws;
+          $scope.windDir = response.data.data.current.weather.wd;
           $scope.cityLocation = response.data.data.location.coordinates.reverse();
           console.log($scope.aqi);
           console.log($scope.cityLocation[0]);
@@ -27,9 +30,5 @@ angular.module('ngAir', ['ngMap'])
 //hide API key
 
 //add error message for bad request
-
-//additional info about air quality
-
-//style display sheet, add additional info.
 
 //data graphic: how to visualize air quality index, maybe over a map?

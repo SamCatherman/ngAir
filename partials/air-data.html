@@ -1,3 +1,9 @@
 <div>
-  <p>The Air Quality Index in {{city}} is: {{aqi}}</p>
+  <div ng-show="city">
+    <h4>{{city}}: </h4>
+    <p>Air Quality Index (based on US EPA standard): {{aqi}}</p>
+    <p>Temperature (deg Celsius): {{temp}}</p>
+    <p>Wind Speed (Meters/second): {{wind }}</p>
+    <p>Wind Direction: {{windDir}}</p>
+  </div>
 </div>

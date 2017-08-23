@@ -4,8 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>ngAir</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="/bower_components/ngmap/build/scripts/ng-map.min.js"></script>
     <script src="http://maps.google.com/maps/api/js"></script>
@@ -14,31 +14,59 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Air Quality Index Monitor</h1>
+        <h1>ngAir</h1>
+        <br>
+        <h4>A simple Angular App designed to bring you the air quality from anywhere on Earth</h4>
       </div>
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <p>Enter a location and find the US Air Quality Index</p>
+          <p>Enter a location and find to retrieve information about Air Quality</p>
         </div>
         <div class="panel-body">
           <div class="searchBar">
             <input type="text" placeholder="Enter country..." ng-model="searchCountry" ng-model-options="{ debounce: 800 }" onclick="select()" autofocus>
             <input type="text" placeholder="Enter city..." ng-model="searchCity" ng-model-options="{ debounce: 800 }" onclick="select()" autofocus>
             <input type="text" placeholder="Enter state..." ng-model="searchState" ng-model-options="{ debounce: 800 }" onclick="select()" autofocus>
-            <button>Search</button>
+            <button class="btn btn-primary">Search</button>
+          </div>
+          <div class="panel-body" id="air-data" ng-include="'partials/air-data.html'">
+
+          </div>
+          <div class="panel-body" id="air-visualization" ng-include="'partials/air-visualization.html'">
+
           </div>
         </div>
       </div>
+      <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#airModal">Learn More about Air Quality</button>
 
-
-
-    <br>
-    <div id="air-data" ng-include="'partials/air-data.html'">
-
+  <!-- Modal -->
+  <div class="modal fade" id="airModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">About Air Quality Index</h4>
+        </div>
+        <div class="modal-body">
+          <p>The AQI is an index for reporting daily air quality. It tells you
+            how clean or polluted your air is, and what associated health
+            effects might be a concern for you. The AQI focuses on health
+            effects you may experience within a few hours or days after
+            breathing polluted air. EPA calculates the AQI for five major air
+            pollutants regulated by the Clean Air Act: ground-level ozone,
+            particle pollution (also known as particulate matter), carbon
+            monoxide, sulfur dioxide, and nitrogen dioxide. <a href="https://airnow.gov/index.cfm?action=aqibasics.aqi">Source</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
-    <br>
-    <ng-map center="[42.1086, -72.5911]"></ng-map>
-    </div>
+  </div>
+    <!-- <ng-map center="[42.1086, -72.5911]"></ng-map> !-->
+</div>
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>

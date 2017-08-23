@@ -1,6 +1,5 @@
 body {
-  color: teal;
-  background: lemonchiffon;
+  color: #337AB7;
   text-align: center;
   margin: auto;
 }
@@ -9,4 +8,37 @@ ng-map {
   width: 50%;
   height: 150%;
   margin: auto;
+}
+
+.colorBar {
+  height: 10%;
+  width: 100%;
+  margin: auto;
+  border-radius: 20px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+#good {
+  background-color: green;
+  color: white;
+}
+#moderate {
+  background-color: yellow;
+  color: black;
+}
+
+#unhealthySens {
+  background-color: orange;
+  color: white;
+}
+
+#unhealthy {
+  background-color: red;
+  color: white;
+}
+
+a {
+  color: red;
+  font-weight: bold;
 }
