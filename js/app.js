@@ -11,7 +11,7 @@ angular.module('ngAir', ['ngMap'])
     $scope.searchState = '';
 
     let getAirQuality = () => {
-      $http.get("http://api.airvisual.com/v2/city?country=" + $scope.searchCountry + "&state=" + $scope.searchState + "&city=" + $scope.searchCity + "&key=CANTSEEME")
+      $http.get("http://api.airvisual.com/v2/city?country=" + $scope.searchCountry + "&state=" + $scope.searchState + "&city=" + $scope.searchCity + "&key=can'tseemee")
         .then((response) => {
           console.log(response);
           $scope.aqi = response.data.data.current.pollution.aqius;
@@ -32,3 +32,5 @@ angular.module('ngAir', ['ngMap'])
 //add error message for bad request
 
 //data graphic: how to visualize air quality index, maybe over a map?
+
+// make search fields mobile-responsive
