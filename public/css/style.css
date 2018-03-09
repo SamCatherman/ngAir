@@ -38,13 +38,17 @@ ng-map {
   color: white;
 }
 
+#err {
+  color: red;
+  font-weight: bold;
+}
 a {
   color: red;
   font-weight: bold;
 }
 
 .jumbotron {
-  background: url('/images/clouds.png') no-repeat center center;
+  background: url('/public/images/clouds.png') no-repeat center center;
   color: white;
 }
 
