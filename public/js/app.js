@@ -5,7 +5,7 @@
     $scope.$watchGroup(['searchCountry', 'searchCity', 'searchState'], () => {
       getAirQuality();
     });
-    
+
     $scope.searchCountry = '';
     $scope.searchCity = '';
     $scope.searchState = '';
@@ -33,6 +33,3 @@
         })
     }
   });
-//todo:
-
-//hide API key
