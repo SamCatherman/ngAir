@@ -1,0 +1,24 @@
+{
+  "name": "ngair",
+  "version": "1.0.0",
+  "description": "A simple Angular App designed to bring you the air quality from anywhere on Earth",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamCatherman/ngAir.git"
+  },
+  "keywords": [
+    "Air",
+    "Quality"
+  ],
+  "author": "Sam Catherman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamCatherman/ngAir/issues"
+  },
+  "homepage": "https://github.com/SamCatherman/ngAir#readme"
+}
