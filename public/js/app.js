@@ -5,12 +5,19 @@
     $scope.$watchGroup(['searchCountry', 'searchCity', 'searchState'], () => {
       getAirQuality();
     });
+    
     $scope.searchCountry = '';
     $scope.searchCity = '';
     $scope.searchState = '';
 
     let getAirQuality = () => {
-      $http.get("http://api.airvisual.com/v2/city?country=" + $scope.searchCountry + "&state=" + $scope.searchState + "&city=" + $scope.searchCity + "&key=cantseeme")
+      $http.get("/airvisual", {
+        params: {
+          country: $scope.searchCountry,
+          city: $scope.searchCity,
+          state: $scope.searchState
+      }
+    })
         .then((response) => {
           let data = response.data.data
           $scope.aqi = data.current.pollution.aqius;
