@@ -12,11 +12,10 @@
     </div>
       <div class="panel-body">
         <form>
-          <div class="searchBar form-group">
-            <input class="form-contril"type="text" placeholder="Enter country..." ng-model="searchCountry" ng-model-options="{ debounce: 500 }" onclick="select()" autofocus>
-            <input class="form-contril"type="text" placeholder="Enter city..." ng-model="searchCity" ng-model-options="{ debounce: 500 }" onclick="select()" autofocus>
-            <input class="form-contril"type="text" placeholder="Enter state..." ng-model="searchState" ng-model-options="{ debounce: 500 }" onclick="select()" autofocus>
-            <br>
+          <div class="searchBar form-group col-md-2 centered-column">
+            <input class="form-control tbox"type="text" placeholder="Enter country..." ng-model="searchCountry" ng-model-options="{ debounce: 500 }" onclick="select()" autofocus>
+            <input class="form-control tbox"type="text" placeholder="Enter city..." ng-model="searchCity" ng-model-options="{ debounce: 500 }" onclick="select()" autofocus>
+            <input class="form-control tbox"type="text" placeholder="Enter state..." ng-model="searchState" ng-model-options="{ debounce: 500 }" onclick="select()" autofocus>
             <button class="btn btn-success">Search</button>
           </div>
         </form>

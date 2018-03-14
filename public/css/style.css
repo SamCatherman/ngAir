@@ -60,7 +60,12 @@ button {
 .centered-column {
   float: none;
   margin: 0 auto;
-  text-align: left;
+  border:
+}
+
+.tbox {
+  margin-top: 5px;
+  padding: 5px;
 }
 
 @media (min-width: @screen-sm-min) {
