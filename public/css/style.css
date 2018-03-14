@@ -42,9 +42,13 @@ ng-map {
   color: red;
   font-weight: bold;
 }
-a {
+#sourceLink {
   color: red;
   font-weight: bold;
+}
+
+a {
+  color: 	#C0C0C0;
 }
 
 .jumbotron {
