@@ -57,6 +57,12 @@ button {
   padding: 20px;
 }
 
+.centered-column {
+  float: none;
+  margin: 0 auto;
+  text-align: left;
+}
+
 @media (min-width: @screen-sm-min) {
     html .searchBar {
      display: flex;

@@ -11,13 +11,15 @@
       <p>Enter a location and find to retrieve information about Air Quality</p>
     </div>
       <div class="panel-body">
-        <div class="searchBar">
-          <input type="text" placeholder="Enter country..." ng-model="searchCountry" ng-model-options="{ debounce: 1500 }" onclick="select()" autofocus>
-          <input type="text" placeholder="Enter city..." ng-model="searchCity" ng-model-options="{ debounce: 1500 }" onclick="select()" autofocus>
-          <input type="text" placeholder="Enter state..." ng-model="searchState" ng-model-options="{ debounce: 1500 }" onclick="select()" autofocus>
-          <br>
-          <button class="btn btn-success">Search</button>
-        </div>
+        <form>
+          <div class="searchBar form-group">
+            <input class="form-contril"type="text" placeholder="Enter country..." ng-model="searchCountry" ng-model-options="{ debounce: 500 }" onclick="select()" autofocus>
+            <input class="form-contril"type="text" placeholder="Enter city..." ng-model="searchCity" ng-model-options="{ debounce: 500 }" onclick="select()" autofocus>
+            <input class="form-contril"type="text" placeholder="Enter state..." ng-model="searchState" ng-model-options="{ debounce: 500 }" onclick="select()" autofocus>
+            <br>
+            <button class="btn btn-success">Search</button>
+          </div>
+        </form>
 
         <div class="partials">
           <!-- <div class="panel-body" id="err"  ng-if="status===400" ng-include="'public/partials/err.html'"></div> -->
